@@ -48,7 +48,7 @@ class Array2d extends ListBase<Array> {
 
   Array2d.fromArray(Array2d list) {
     // deep copy of the parameter
-    l = list.map((element) => element).toList();
+    l = list.map((element) => Array.fromArray(element)).toList();
   }
 
   Array2d.fixed(int row, int column, {double? initialValue}) {
